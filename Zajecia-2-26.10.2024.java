@@ -84,13 +84,40 @@ public class Main {
 //                System.out.println("Prosze podać liczbe całkowitą");
 //            }
 //        }
-        double celsjusz;
+//        double celsjusz;
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Podaj liczbę celsjuszy: ");
+//        celsjusz = scanner.nextInt();
+//        scanner.close();
+//        double farenhajt = (celsjusz * 1.78) + 32;
+//        System.out.println("Celsujesze na fahrenheity: " + farenhajt);
 
+
+        int najwieksza = 0;
+        int najmniejsza = 0;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj liczbę celsjuszy: ");
-        celsjusz = scanner.nextInt();
-        double farenhajt = (celsjusz * 1.78) + 32;
-        System.out.println("Celsujesze na fahrenheity: " + farenhajt);
+
+        System.out.println("Podaj pierwszą liczbę: ");
+        int liczba1 = scanner.nextInt();
+        System.out.println("Podaj druga liczbę: ");
+        int liczba2 = scanner.nextInt();
+        System.out.println("Podaj trzecią liczbę: ");
+        int liczba3 = scanner.nextInt();
+        if(liczba1 > liczba2){
+            najwieksza = liczba1;
+            najmniejsza = liczba2;
+        } else if (liczba2 > liczba3) {
+            najwieksza = liczba2;
+            najmniejsza = liczba3;
+        } else if (liczba1 > liczba3) {
+            najwieksza = liczba1;
+            najmniejsza = liczba3;
+        }
+
+        System.out.print("Najmniejsza liczba to: " + najmniejsza + ", a największa  " + najwieksza);
+
+
     }
 
 }
